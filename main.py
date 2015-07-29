@@ -246,7 +246,7 @@ class ThreadPage(webapp2.RequestHandler):
               gcs_file.write(img_img)
               gcs_file.close()
               #url of where image going to upload
-              url='https://console.developers.google.com/m/cloudstorage/b/cloudbucket12/o/'+name
+              url='Path of googleCloud Bucket'+name
               try:#Inseting url,username and thread name to table
                       cursor.execute('INSERT INTO thread (username,imageref,thread_name) VALUES (%s,%s,%s)',(username,url,threadname))
               except:
